@@ -21,11 +21,11 @@ class HoneyDecorator {
     this.amount = amount;
   }
   // Getter для name повертає рядок `${this.drink.name} з ${this.amount} г меду`.
-  get(name) {
+  get name() {
     return `${this.drink.name} з ${this.amount} г меду`;
   }
   // Getter для price розраховує загальну вартість напою, враховуючи базову вартість напою
-  get(price) {
+  get pice() {
    const honeyPrice = 0.5;
     return this.drink.price + honeyPrice * this.amount;
   }

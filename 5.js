@@ -6,14 +6,14 @@ class Writer {
   #content = "";
   // Сетер для властивості content. Він приймає значення newContent (новий текст),
   set content(newContent) {
-this.content = newContent;
+this.#content = newContent;
 this.#store();
   }
   // який потрібно встановити як поточний текст. Кожен раз, коли присвоюється нове значення,
   // викликається метод #store(), який зберігає поточний стан тексту у версіях.
   
   // Метод гетер для властивості content, повертає this.#content.
-  get(content) {
+  get content() {
     return this.#content;
   }
   // Приватний метод #store використовується для зберігання поточного стану тексту.
@@ -39,7 +39,7 @@ class Version {
   static #versions = [];
   // Статичний метод create приймає аргумент content (текст версії) і створює новий екземпляр класу Version в який передає content .
   static create(content) {
-    this.versions.push(newVersion(content))
+    this.#versions.push(new Version(content))
   }
   // Створений екземпляр додається до масиву версій versions.
 
