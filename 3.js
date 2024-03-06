@@ -11,10 +11,10 @@ class Customer {
   /**
    * Метод відправки повідомлення клієнту по електронній пошті.Приймає message - повідомлення,та виводить в консоль ${this.email} ${message}.
    */
-  constructor({email}) {
+  constructor(email) {
     this.email = email;
   }
-  sendEmail({message}) {
+  sendEmail(message) {
     console.log(`${this.email} ${message}`);
   }
 }
@@ -26,7 +26,7 @@ class Product {
   /**
    * Конструктор для класу Product.Приймає name - Назва продукту.
    */
-  constructor({name}) {
+  constructor(name) {
     this.name = name;
   }
 }
@@ -39,7 +39,7 @@ class Store {
   /**
    * Конструктор для класу Store.Приймає name - Назва магазину, та створює пустий масив customers
    */
-  constructor({name}) {
+  constructor(name) {
     this.name = name;
     this.customers = [];
   }
